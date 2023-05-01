@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../para-casa/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+    <script src="../para-casa/index.js"></script>
+    <title>Calculadora de Desconto</title>
+</head>
+
+<body>
+
+    <section> 
+        <h1>Calculadora de Desconto</h1>
+
+        Valor do Produto<br />
+        <input id="valorDoProduto" type="number" /><br />
+        Percentual de Desconto<br />
+        <input id="percentualDeDesconto" type="number" /><br /><br>
+        <button onclick="aplicandoDesconto()">Aplicar Desconto</button>
+
+        <br /><br />
+        <p>Desconto aplicado com Sucesso ! O valor a pagar é R$ <span></span></p>
+  
+</section>
+    <script>
+        let valorDoProduto = document.querySelector('#valorDoProduto');
+        let percentualDeDesconto = document.querySelector('#percentualDeDesconto');
+        let desconto = document.querySelector('span');
+
+        function aplicandoDesconto() {
+            desconto.innerHTML = parseInt(valorDoProduto.value) * parseInt(percentualDeDesconto.value) / 100;
+        } 
+
+        
+    </script>
+</body>
+
+</html>
