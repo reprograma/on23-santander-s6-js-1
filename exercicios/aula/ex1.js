@@ -19,8 +19,9 @@ let senhaCadastrada = 'teste123';
 
 let emailDigitado = prompt('Por favor digite seu e-mail');
 let senhaDigitada = prompt('Por favor digite sua senha');
+let tentativas = 4;
 
-while (emailDigitado !== emailCadastrado || senhaDigitada !== senhaCadastrada) {
+while ((emailDigitado !== emailCadastrado || senhaDigitada !== senhaCadastrada) && tentativas > 0) {
   // CASOS QUE ENTRA NO LOOP
   // senha diferente
   // email diferente
@@ -28,7 +29,31 @@ while (emailDigitado !== emailCadastrado || senhaDigitada !== senhaCadastrada) {
   alert('Informações de login inválidas');
   senhaDigitada = prompt('Digite sua senha novamente');
   emailDigitado = prompt('Digite seu email novamente');
+  tentativas--;
 }
 // senha e email corretos
-alert('Parabéns, login realizado')
+if (tentativas = 0) {
+  alert('Conta bloqueada!. Você excedeu o número de tentativas.')
+} else {
+  alert('Parabéns, login realizado')
+}
 
+// VERSAO COM FOR -> THANKS SKY <3
+// let emailCadastrado = 'teste@reprograma.com.br';
+// let senhaCadastrada = 'teste123';
+
+// let emailDigitado = prompt('Por favor digite seu e-mail');
+// let senhaDigitada = prompt('Por favor digite sua senha');
+
+let tentativa
+for (tentativa = 1; (emailDigitado !== emailCadastrado || senhaDigitada !== senhaCadastrada) && tentativa < 5; tentativa++) {
+  alert("Info inválida")
+  emailDigitado = prompt("Email: ")
+  senhaDigitada = prompt("Senha: ")
+}
+if (tentativa == 5) {
+ alert("Não pode mais logar")
+}
+else {
+  alert("Vc logou")
+}
