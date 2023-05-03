@@ -15,18 +15,17 @@
 // 3- prompt
 // 4- let
 // 5- function
-// 6- alerta
+// 7- alert/ console.log
+
 
 let precoProduto = prompt("Insira o preço do produto.")
 let percentualDesconto = prompt("Insara a porcentagem de desconto.")
 
-function calculo (precoProduto , percentualDesconto) {
-    let calculoDesconto = precoProduto * percentualDesconto / 100;
-    let precoComDesconto = precoProduto - calculoDesconto;
-    return precoComDesconto;
+function calcularPrecoComDesconto (preco , desconto) {
+    let calculoDesconto = preco * desconto / 100;
+    let precoComDesconto = preco - calculoDesconto;
+    alert(precoComDesconto);
+    console.log(precoComDesconto);
 }
 
-let precoComDesconto = calculo(precoProduto, percentualDesconto);
-
-alert("O preço final do produto é: " + precoComDesconto);
-console.log("O preço final do produto é: " + precoComDesconto);
+calcularPrecoComDesconto (precoProduto, percentualDesconto)
