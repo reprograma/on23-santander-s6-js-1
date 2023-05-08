@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 70px;
+    width: 450px;
+    height: 400px;
+    background: rgba(176, 122, 207, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(33, 39, 124, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+input{
+    width: 300px;
+    height: 20px;
+    
+}
+button{
+    width: 200px;
+    height: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    color: aliceblue;
+    background: rgb(153,115,144);
+    background: linear-gradient(90deg, rgba(153,115,144,1) 1%, rgba(78,9,121,1) 10%, rgba(0,212,255,1) 100%);
+    
+}
+
+button:hover{
+    background: rgb(194, 133, 159);
+    background: radial-gradient(circle, rgb(204, 133, 164) 0%, rgb(72, 123, 180) 100%);
+}
